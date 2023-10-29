@@ -3,11 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Vite + React</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('#icon').click(function(){
+             $('ul').toggleClass('show');
+          });
+      });
+    </script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+   <nav>
+    <label class="logo">NITTE</label>
+    <ul>
+     <li><a class="Active" href="">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars"></i>
+    </label>
+   </nav>
+   <section>
+    
+   </section>
+    <script type="module" src="scjs"></script>
   </body>
 </html>
