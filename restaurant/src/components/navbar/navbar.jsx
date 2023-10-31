@@ -1,66 +1,80 @@
-import React, { useEffect } from 'react';
+import React  , {useState} from "react";
+import PropTypes from "prop-types";
 
-import './styles.css'
-// import 'restaurant/src/components/styles.css' // Import your CSS file
+export default function Navbar(props) {
+  const bodyElement = document.body;
 
-function App() {
-//   useEffect(() => {
-//     // Add your jQuery logic here
-//     $(document).ready(function () {
-//       $('#icon').click(function () {
-//         $('ul').toggleClass('show');
-//       });
-//     });
-//   }, []);
+  const [theme , setTheme] = useState("Light")
+
+  function changeTheme(){
+    if(theme === "Light"){
+      setTheme("Dark")
+      document.body.dataset.bsTheme = "dark"
+    }else{
+      setTheme("Light")
+      document.body.dataset.bsTheme = "light"
+    }
+  }
 
   return (
     <div>
-    <html>
-      <head>
-        <meta charSet="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <title>Vite + React</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </head>
-      <body>
-        <nav>
-          <label className="logo">NITTE</label>
-          <ul>
-            <li>
-              <a className="Active" href="">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Feedback</a>
-            </li>
-          </ul>
-          <label id="icon">
-            <i className="fa fa-bars"></i>
-          </label>
-        </nav>
-        <section></section>
-        <script type="module" src="scjs"></script>
-      </body>
-    </html>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-inverse">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            {props.title}
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="navbar-header">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Menu
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Pricing
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+              onClick={changeTheme}
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault">
+              {theme}
+            </label>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }
 
-export default App;
+Navbar.propTypes = {
+  title: PropTypes.string,
+};
+
+Navbar.defaultProps = {
+  title: "Set title",
+};
