@@ -47,5 +47,29 @@ const menu = [
         img:'./images/item-7.jpg',
         desc:'ljkdhdbkjdk.jbdlbdshlorem',
     },
+    {
+        id:7,
+        title:'Lime Juice',
+        category:'Juices',
+        price:26,
+        img:'https://cdn2.stylecraze.com/wp-content/uploads/2014/09/7-Serious-Side-Effects-Of-Lime-Juice-1.jpg',
+        desc:'ljkdhdbkjdk.jbdlbdshlorem',
+    },
+    {
+        id:8,
+        title:'Cold Coffee',
+        category:'Juices',
+        price:42,
+        img:'https://s-i.huffpost.com/gadgets/slideshows/346448/slide_346448_3646204_free.jpg',
+        desc:'ljkdhdbkjdk.jbdlbdshlorem',
+    },
+    {
+        id:9,
+        title:'Water Melon Juice',
+        category:'Juices',
+        price:47,
+        img:'https://i0.wp.com/www.rachaelburgess.com/wp-content/uploads/2018/07/watermelon-juice-recipe_0173.jpg',
+        desc:'ljkdhdbkjdk.jbdlbdshlorem',
+    }
     ];
     export default menu;

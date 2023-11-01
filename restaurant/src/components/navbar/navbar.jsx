@@ -1,18 +1,16 @@
-import React  , {useState} from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 export default function Navbar(props) {
-  const bodyElement = document.body;
+  const [theme, setTheme] = useState("Light");
 
-  const [theme , setTheme] = useState("Light")
-
-  function changeTheme(){
-    if(theme === "Light"){
-      setTheme("Dark")
-      document.body.dataset.bsTheme = "dark"
-    }else{
-      setTheme("Light")
-      document.body.dataset.bsTheme = "light"
+  function changeTheme() {
+    if (theme === "Light") {
+      setTheme("Dark");
+      document.body.dataset.bsTheme = "dark";
+    } else {
+      setTheme("Light");
+      document.body.dataset.bsTheme = "light";
     }
   }
 
@@ -23,17 +21,19 @@ export default function Navbar(props) {
           <a className="navbar-brand" href="#">
             {props.title}
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <div style={{marginRight : "auto"}}>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="navbar-header">
@@ -53,15 +53,15 @@ export default function Navbar(props) {
               </li>
             </ul>
           </div>
-          <div class="form-check form-switch">
+          <div className="form-check form-switch">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
               onClick={changeTheme}
             />
-            <label class="form-check-label" for="flexSwitchCheckDefault">
+            <label className="form-check-label" for="flexSwitchCheckDefault">
               {theme}
             </label>
           </div>
