@@ -1,7 +1,9 @@
+//import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './components/Menu';
 import items from './components/Data';
+// import Categories from './components/Categories';
 import { useState } from 'react';
 import Categories from './components/categories';
 

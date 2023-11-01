@@ -17,7 +17,7 @@ const Menu = ({items}) => {
                 <div className='content'>
                     <div className='title'>
                     <h4>{title}</h4>
-                    <button className="price-button">₹{price}</button>
+                    <button class="price-button">₹{price}</button>
                     </div>
                     <p>{desc}</p>
                 </div>
