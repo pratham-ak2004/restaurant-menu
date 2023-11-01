@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const bodyElement = document.body;
@@ -20,9 +21,9 @@ export default function Navbar(props) {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-inverse shadow p-3 mb-5 bg-white rounded">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             {props.title}
-          </a>
+          </Link>
           <div style={{ marginRight: "auto" }}>
             <button
               className="navbar-toggler"

@@ -5,6 +5,7 @@ import Cards from './components/layout/Cards'
 import Carousal from './components/layout/components/Carousal/Carousal';
 import Footer from './components/layout/components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Overview from "./components/layout/components/Overview/Overview";
 
 function App() {
   const [count, setCount] = useState(0)

@@ -1,4 +1,5 @@
 import React from "react";
+import Carousal from '../Carousal/Carousal';
 
 export default function Overview(props) {
   return (
@@ -31,6 +32,7 @@ export default function Overview(props) {
           content. A joke, perhaps. Unfortunately, there's none of that here.
         </p>
       </div>
+      <Carousal/>
     </div>
   );
 }
