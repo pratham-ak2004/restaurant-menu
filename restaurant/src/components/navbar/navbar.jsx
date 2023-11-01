@@ -16,7 +16,7 @@ export default function Navbar(props) {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-inverse">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-inverse shadow p-3 mb-5 bg-white rounded">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             {props.title}
