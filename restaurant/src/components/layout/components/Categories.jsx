@@ -10,7 +10,7 @@ const Categories = ({ filterItems, categories }) => {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              "justify-content": "center",
+              "justifyContent": "center",
             }}
           >
             {categories.map((category, index) => {
