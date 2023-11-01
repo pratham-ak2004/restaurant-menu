@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const [theme, setTheme] = useState("Light");
@@ -18,10 +19,10 @@ export default function Navbar(props) {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-inverse shadow p-3 mb-5 bg-white rounded">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             {props.title}
-          </a>
-          <div style={{marginRight : "auto"}}>
+          </Link>
+          <div style={{ marginRight: "auto" }}>
             <button
               className="navbar-toggler"
               type="button"
@@ -37,19 +38,19 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="navbar-header">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/cards">
                   Menu
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
               </li>
             </ul>
           </div>

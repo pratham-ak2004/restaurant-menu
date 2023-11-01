@@ -6,7 +6,7 @@ const Categories = ({filterItems,categories}) => {
       <div className='row'>
         <div className='col-8 mx-auto'>
           <div style={{'display': 'flex',
-    'flex-wrap': 'wrap',
+    'flexWrap': 'wrap',
     'justify-content': 'center'}}>{
             categories.map((category)=>{
              return(
