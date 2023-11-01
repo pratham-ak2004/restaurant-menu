@@ -5,10 +5,8 @@ const Categories = ({filterItems,categories}) => {
     <div className='container'>
       <div className='row'>
         <div className='col-8 mx-auto'>
-          <div style={{'display': 'flex',
-    'flex-wrap': 'wrap',
-    'justify-content': 'center'}}>{
-            categories.map((category)=>{
+          <div className='category-tabs'>{
+            categories.map((category,index)=>{
              return(
               <button className='filterItems' onClick={()=> filterItems(category)}>{category}</button>
              )
