@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import {QuoteIcon , AppsIcon , ListUnorderedIcon} from '@primer/octicons-react'
 
 export default function Navbar(props) {
   const bodyElement = document.body;
@@ -24,7 +25,7 @@ export default function Navbar(props) {
           <Link className="navbar-brand" to="/">
             {props.title}
           </Link>
-          <div style={{ marginRight: "auto" }}>
+          <div style={{ marginLeft: "auto" }}>
             <button
               className="navbar-toggler"
               type="button"
@@ -34,7 +35,10 @@ export default function Navbar(props) {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              {/* <span className="navbar-toggler-icon"></span> */}
+              {/* <QuoteIcon size={24} /> */}
+              {/* <AppsIcon size={16} /> */}
+              <ListUnorderedIcon size={24} />
             </button>
           </div>
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -56,7 +60,7 @@ export default function Navbar(props) {
               </li>
             </ul>
           </div>
-          <div className="form-check form-switch">
+          <div className="form-check form-switch" style={{"marginLeft" : "3%"}}>
             <input
               className="form-check-input"
               type="checkbox"
