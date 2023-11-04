@@ -2,10 +2,11 @@ import { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/navbar/navbar'
 import Cards from './components/layout/Cards'
-import Carousal from './components/layout/components/Carousal/Carousal';
+// import Carousal from './components/layout/components/Carousal/Carousal';
 import Footer from './components/layout/components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Overview from "./components/layout/components/Overview/Overview";
+import LoadingBar from 'react-top-loading-bar';
 
 function App() {
   const [count, setCount] = useState(0)
