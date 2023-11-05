@@ -7,6 +7,8 @@ import Navbar from './components/navbar/navbar'
 import Cards from './components/layout/Cards'
 import Carousal from './components/layout/components/Carousal/Carousal';
 import Footer from './components/layout/components/Footer/Footer';
+import Hero from './components/layout/components/Hero/Hero';
+import Category from './components/layout/components/Categories/Category';
 
 // import { useState } from "react";
 // import "./App.css";
@@ -22,9 +24,14 @@ function App() {
   return (
     <div>
       <Navbar/>
-      {/* <Overview/> */}
-      {/* <Carousal/> */}
+      
+      <Hero/>
+      {/* <Overview/>
+      <Carousal/> */}
+      <Category/>
+      
       <Cards/>
+
       <Footer/>
       {/* <h1>hello world</h1> */}
       {/* 
