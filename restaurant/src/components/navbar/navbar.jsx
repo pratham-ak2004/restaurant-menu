@@ -1,18 +1,20 @@
-import React  , {useState} from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import {QuoteIcon , AppsIcon , ListUnorderedIcon} from '@primer/octicons-react'
 
 export default function Navbar(props) {
   const bodyElement = document.body;
 
-  const [theme , setTheme] = useState("Light")
+  const [theme, setTheme] = useState("Light");
 
-  function changeTheme(){
-    if(theme === "Light"){
-      setTheme("Dark")
-      document.body.dataset.bsTheme = "dark"
-    }else{
-      setTheme("Light")
-      document.body.dataset.bsTheme = "light"
+  function changeTheme() {
+    if (theme === "Light") {
+      setTheme("Dark");
+      document.body.dataset.bsTheme = "dark";
+    } else {
+      setTheme("Light");
+      document.body.dataset.bsTheme = "light";
     }
   }
 
@@ -20,48 +22,53 @@ export default function Navbar(props) {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-inverse shadow p-3 mb-5 bg-white rounded">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             {props.title}
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          </Link>
+          <div style={{ marginLeft: "auto" }}>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              {/* <span className="navbar-toggler-icon"></span> */}
+              {/* <QuoteIcon size={24} /> */}
+              {/* <AppsIcon size={16} /> */}
+              <ListUnorderedIcon size={24} />
+            </button>
+          </div>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="navbar-header">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/cards">
                   Menu
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
               </li>
             </ul>
           </div>
-          <div class="form-check form-switch">
+          <div className="form-check form-switch" style={{"marginLeft" : "3%"}}>
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
               onClick={changeTheme}
             />
-            <label class="form-check-label" for="flexSwitchCheckDefault">
+            <label className="form-check-label" for="flexSwitchCheckDefault">
               {theme}
             </label>
           </div>
