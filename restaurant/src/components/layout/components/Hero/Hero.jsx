@@ -1,5 +1,7 @@
-import React from 'react'
-import './Hero.css'
+import React from 'react';
+import './Hero.css';
+import {Link} from 'react-router-dom';
+
 const Hero = () => {
   return (
     <div>
@@ -15,8 +17,8 @@ const Hero = () => {
                             been the
                             industry's standard dummy.</p>
                         <div>
-                            <button class="btn btn-primary" herf="/Cards">Menu</button>
-                            <button class="btn btn-secondary">About Us</button>
+                            <Link to="/cards"><button class="btn btn-primary" herf="/Cards">Menu</button></Link>
+                            <Link to="/about"><button class="btn btn-secondary">About Us</button></Link>
                         </div>
                         <div class="hero-image">
                             <img className='front-pic' src="./images/straw.png" alt=""/>
