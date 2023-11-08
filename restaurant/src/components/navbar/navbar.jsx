@@ -64,7 +64,7 @@ export default function Navbar(props) {
               id="flexSwitchCheckDefault"
               onClick={changeTheme}
             />
-            <label className="form-check-label" for="flexSwitchCheckDefault">
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
               {theme}
             </label>
           </div>

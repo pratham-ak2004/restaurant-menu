@@ -1,9 +1,6 @@
 import React from 'react';
 import './Category.css';
 
-import React from 'react';
-import './Category.css';
-
 const Category = () => {
 
   return (
