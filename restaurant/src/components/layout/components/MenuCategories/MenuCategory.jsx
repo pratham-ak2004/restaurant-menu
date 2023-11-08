@@ -1,6 +1,9 @@
 import React from 'react';
 import './Category.css';
 
+import React from 'react';
+import './Category.css';
+
 const Category = () => {
 
   return (
@@ -30,8 +33,6 @@ const Category = () => {
                  </div>
                   
            </div>
-
-
 
         <div className="col-md-4 border-right">
             <div className="cards">
