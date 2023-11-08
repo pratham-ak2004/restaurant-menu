@@ -5,9 +5,11 @@ const Menu = ({ items }) => {
     <main className="product-space">
       <div className="Container">
         <div className="row card-deck">
+
           {items.map((item) => {
             const { id, img, price, desc, title } = item;
             return (
+
               <div className="col-6 text-center" style={{"marginBlock" : "1%"}} key={id}>
                 <article className="shadow rounded" key={id} style={{"height" : "100%"}}>
                 <div className="card" style={{"height" : "100%"}}>
@@ -21,8 +23,10 @@ const Menu = ({ items }) => {
                   </div>
                 </div></article>
               </div>
+
             );
           })}
+          
         </div>
       </div>
     </main>
