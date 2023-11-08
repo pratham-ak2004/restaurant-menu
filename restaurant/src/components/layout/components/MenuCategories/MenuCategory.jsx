@@ -1,5 +1,6 @@
-import React from 'react'
-import './Category.css'
+import React from 'react';
+import './Category.css';
+
 const Category = () => {
 
   return (
@@ -34,7 +35,7 @@ const Category = () => {
 
         <div class="col-md-4 border-right">
             <div class="cards">
-                <div class=" second bg-white p-4 text-center">
+                <div class="second bg-white p-4 text-center">
                     <img className='im' src="https://cdn-icons-png.flaticon.com/128/4252/4252416.png"/>
 
                     <h5 className='cards-text'>Lunch</h5>
@@ -66,4 +67,4 @@ const Category = () => {
   )
 }
 
-export default Category
+export default Category;

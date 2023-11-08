@@ -1,10 +1,9 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./components/Menu";
-import items from "./components/Data";
+import items from "./components/Data/Data";
 import { useState } from "react";
-// import Categories from "./components/categories";
-import SliderButtons from "./components/SliderButtons";
+import SliderButtons from "./components/Filter/SliderButtons";
 
 const allcategories = ["All", ...new Set(items.map((item) => item.category))];
 
@@ -22,9 +21,7 @@ function Cards() {
   };
   return (
     <div className="container py-5">
-      {/*const all categories*/}
       <SliderButtons filterItems={filterItems} categories={categories} />
-      {/* <Categories filterItems={filterItems} categories={categories} /> */}
       <Menu items={menuItems} />
     </div>
   );
