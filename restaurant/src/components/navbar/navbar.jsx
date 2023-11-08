@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import {QuoteIcon , AppsIcon , ListUnorderedIcon} from '@primer/octicons-react'
+import {ListUnorderedIcon} from '@primer/octicons-react'
 
 export default function Navbar(props) {
-  const bodyElement = document.body;
 
   const [theme, setTheme] = useState("Light");
 
@@ -35,9 +34,6 @@ export default function Navbar(props) {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              {/* <span className="navbar-toggler-icon"></span> */}
-              {/* <QuoteIcon size={24} /> */}
-              {/* <AppsIcon size={16} /> */}
               <ListUnorderedIcon size={24} />
             </button>
           </div>
