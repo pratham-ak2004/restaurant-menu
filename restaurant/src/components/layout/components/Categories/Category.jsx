@@ -3,17 +3,17 @@ import "./Category.css";
 const Category = () => {
   return (
     <div className="abc">
-      {/* <div class="main text-center mt-5">
-         <h6 class="heading">What's included for 12 months</h6>
-         <p class="text-info">Everything you'll need to support customer in your first year</p>
-         <p class="text-info">We'll also discount your 2nd year with help Scout 20%</p>
+      {/* <div className="main text-center mt-5">
+         <h6 className="heading">What's included for 12 months</h6>
+         <p className="text-info">Everything you'll need to support customer in your first year</p>
+         <p className="text-info">We'll also discount your 2nd year with help Scout 20%</p>
         </div> */}
 
-      <div class="container mt-4 d-flex justify-content-center">
-        <div class="row g-0">
-          <div class="col-md-4 border-right">
-            <div class="cards">
-              <div class="first bg-white p-4 text-center">
+      <div className="container mt-4 d-flex justify-content-center">
+        <div className="row g-0">
+          <div className="col-md-4 border-right">
+            <div className="cards">
+              <div className="first bg-white p-4 text-center">
                 <img
                   className="im"
                   src="https://cdn-icons-png.flaticon.com/128/2648/2648918.png"
@@ -27,9 +27,9 @@ const Category = () => {
             </div>
           </div>
 
-          <div class="col-md-4 border-right">
-            <div class="cards">
-              <div class=" second bg-white p-4 text-center">
+          <div className="col-md-4 border-right">
+            <div className="cards">
+              <div className=" second bg-white p-4 text-center">
                 <img
                   className="im"
                   src="https://cdn-icons-png.flaticon.com/128/4252/4252416.png"
@@ -42,9 +42,9 @@ const Category = () => {
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="cards">
-              <div class=" third bg-white p-4 text-center">
+          <div className="col-md-4">
+            <div className="cards">
+              <div className=" third bg-white p-4 text-center">
                 <img className="im" src="./images/soda.png" />
                 <h5 className="cards-text">Drinks</h5>
                 <p className="cards-text">
