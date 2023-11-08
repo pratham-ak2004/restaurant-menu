@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom';
 const Hero = () => {
   return (
     <div>
-        <header class="hero flex items-center">
-                    <div class="container">
-                        <div class="welcome flex items-center">
+        <header className="hero flex items-center">
+                    <div className="container">
+                        <div className="welcome flex items-center">
                             
                             {/* <img src="./icons/logo-2.svg" alt=""/> */}
                         </div>
@@ -18,11 +18,11 @@ const Hero = () => {
                             industry's standard dummy.</p>
                         <div>
 
-                            <Link to="/cards"><button class="btn btn-primary" herf="/Cards">Menu</button></Link>
-                            <Link to="/about"><button class="btn btn-secondary">About Us</button></Link>
+                            <Link to="/cards"><button className="btn btn-primary" herf="/Cards">Menu</button></Link>
+                            <Link to="/about"><button className="btn btn-secondary">About Us</button></Link>
 
                         </div>
-                        <div class="hero-image">
+                        <div className="hero-image">
                             <img className='front-pic' src="./images/straw.png" alt=""/>
                         </div>
                     </div>
