@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import {ListUnorderedIcon} from '@primer/octicons-react'
+import { ListUnorderedIcon } from "@primer/octicons-react";
 
 export default function Navbar(props) {
-
   const [theme, setTheme] = useState("Light");
 
   function changeTheme() {
@@ -19,12 +18,11 @@ export default function Navbar(props) {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-inverse shadow p-3 mb-5 bg-white rounded">
-        <div className="container-fluid">
+      <nav className="navbar fixed-top navbar-expand-sm bg-body-tertiary navbar-inverse shadow p-3 bg-white rounded">
+        <div className="container-fluid container">
           <Link className="navbar-brand" to="/">
-            {props.title}
+            <span className="h3 mb-0">{props.title}</span>
           </Link>
-          <div style={{ marginLeft: "auto" }}>
             <button
               className="navbar-toggler"
               type="button"
@@ -36,27 +34,30 @@ export default function Navbar(props) {
             >
               <ListUnorderedIcon size={24} />
             </button>
-          </div>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="navbar-header">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/cards">
-                  Menu
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="form-check form-switch" style={{"marginLeft" : "3%"}}>
+          <div
+            className="collapse navbar-collapse"
+            id="navbarNav"
+          >
+            <div style={{"width":"100%"}}>
+              <ul className="navbar-nav">
+                <li className="navbar-header">
+                  <Link className="nav-link active" aria-current="page" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/cards">
+                    Menu
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/about">
+                    About
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          <div className="form-check form-switch">
             <input
               className="form-check-input"
               type="checkbox"
@@ -64,9 +65,13 @@ export default function Navbar(props) {
               id="flexSwitchCheckDefault"
               onClick={changeTheme}
             />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
               {theme}
             </label>
+          </div>
           </div>
         </div>
       </nav>

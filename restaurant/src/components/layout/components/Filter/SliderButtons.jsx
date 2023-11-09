@@ -1,38 +1,35 @@
 import React from "react";
-import { Button, ButtonGroup } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
-const SlideButtonBar = ({ filterItems, categories }) => {
-   const [activeButtonIndex, setActiveButtonIndex] = React.useState(0);
+const ResponsiveDropdownFilter = ({ filterItems, categories }) => {
+  const [selectedCategory, setSelectedCategory] = React.useState(categories[0]);
 
-   const handleButtonClick = (index) => {
-     setActiveButtonIndex(index);
-   };
-
-   const callBoth = (value , category) => {
-        handleButtonClick(value);
-        filterItems(category);
-   }
+  const handleDropdownSelect = (category) => {
+    setSelectedCategory(category);
+    filterItems(category);
+  };
 
   return (
-    <div style={{"display" : "flex" , "justifyContent" : "space-evenly" , "height" : "4rem"}}>
-    <ButtonGroup
-      aria-label="Slide button bar"
-      className="slide-button-bar "
-    >
-      {categories.map((category, index) => (
-        <Button
-          className="lg"
-          key={index}
-          variant="primary"
-          onClick={() => callBoth(index,category)}
-          active={index === activeButtonIndex}
-        >
-          {category}
-        </Button>
-      ))}
-    </ButtonGroup>
+    <div className="jutify-content-center">
+    <Dropdown>
+      <Dropdown.Toggle variant="primary" id="dropdown-basic">
+        {selectedCategory}
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        {categories.map((category, index) => (
+          <Dropdown.Item
+            key={index}
+            active={category === selectedCategory}
+            onClick={() => handleDropdownSelect(category)}
+          >
+            {category}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Menu>
+    </Dropdown>
     </div>
   );
 };
 
-export default SlideButtonBar;
+export default ResponsiveDropdownFilter;
