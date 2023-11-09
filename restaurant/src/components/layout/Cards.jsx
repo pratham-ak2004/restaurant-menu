@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./components/Menu";
 import items from "./components/Data/Data";
 import { useState } from "react";
-import SliderButtons from "./components/Filter/SliderButtons";
+import SliderButtons from "./components/Filter/SliderButtons.jsx";
 
 const allcategories = ["All", ...new Set(items.map((item) => item.category))];
 
@@ -20,7 +20,7 @@ function Cards() {
     return setMenuItems(newItems);
   };
   return (
-    <div className="container py-5">
+    <div className="container py-5" style={{"marginTop" : "10%"}}>
       <SliderButtons filterItems={filterItems} categories={categories} />
       <Menu items={menuItems} />
     </div>
