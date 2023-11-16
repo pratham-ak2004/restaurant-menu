@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-image: url(pngtree-university-canteen-crowd-photography-image_839403.jpg);
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ nav a {
     text-decoration: none;
     color: #fff;
     margin: 0 15px;
-}
+} */
 
 
 
@@ -76,38 +76,38 @@ nav a {
     top: 124px;
     left: 96px;
     background-color: rgba(227, 224, 224, 0.72);
-    width: 1267px;
-    height: 805px;
+    /* width: 1267px;
+    height: 805px; */
   }
   .desktop-1-child1,
   .rectangle-icon {
     position: absolute;
     top: 154px;
     left: 134px;
-    width: 355px;
-    height: 195px;
+    /* width: 355px;
+    height: 195px; */
     object-fit: cover;
   }
   .desktop-1-child1 {
     top: 309px;
     left: 326px;
-    width: 257px;
-    height: 218px;
+    /* width: 257px;
+    height: 218px; */
   }
   .desktop-1-child2,
   .desktop-1-child3 {
     position: absolute;
     top: 482px;
     left: 134px;
-    width: 355px;
-    height: 222px;
+    /* width: 355px;
+    height: 222px; */
     object-fit: cover;
   }
   .desktop-1-child3 {
     top: 671px;
     left: 326px;
-    width: 257px;
-    height: 251px;
+    /* width: 257px;
+    height: 251px; */
   }
   .about-us {
     position: absolute;
@@ -132,6 +132,6 @@ nav a {
     color: var(--color-gray-500);
     text-align: justify;
     display: inline-block;
-    width: 725px;
-    height: 384px;
+    /* width: 725px;
+    height: 384px; */
   }
